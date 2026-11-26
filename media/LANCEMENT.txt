@@ -1,0 +1,15 @@
+STATUT : APPLI PAS ENCORE PUBLIÉE
+(Quand l'appli est publiée, remplacer par « APPLI PUBLIÉE » + les liens ci-dessous ; la tâche du jour le détecte et propose le plan de lancement.)
+
+LIENS
+- App Store :
+- Google Play :
+- Lien unique (redirige selon le téléphone, ex. clearinsure.fr/app) :
+
+PLAN DE LANCEMENT (dans l'ordre, à cocher)
+[ ] 1. Lien unique créé
+[ ] 2. Lien dans la bio + « Disponible sur iPhone et Android »
+[ ] 3. Reel « C'est là » + story avec sticker Lien
+[ ] 4. Tâches planifiées mises à jour (« Dans l'appli », « Télécharge l'appli : lien en bio », sticker Lien sur les stories réponses)
+[ ] 5. Mot-clé en commentaire « APPLI » → lien en message privé
+[ ] 6. Suivi utm + point chiffré à 2 semaines
