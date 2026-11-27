@@ -17,12 +17,11 @@ CH=f'''<div class="s" style="height:{H}px;padding:60px 76px 50px;gap:22px">{LOGO
 <div style="margin-top:auto;font-size:19px;color:#667085">Source : France Assureurs, « L’assurance habitation en 2025 », 24 juillet 2026 · Information générale, pas un conseil en assurance.</div></div>'''
 NEWS=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:18px">{LOGO}
 <div class="blk" style="position:relative;overflow:hidden;flex:none;background:#0b1220;border-radius:18px;height:60px;display:flex;align-items:center"><div style="position:absolute;left:0;top:0;bottom:0;z-index:2;background:#dc483c;color:#fff;font-weight:800;font-size:28px;letter-spacing:3px;padding:0 26px;display:flex;align-items:center">ACTU</div><div id="tick" style="white-space:nowrap;color:#f6f7f9;font-weight:700;font-size:26px;letter-spacing:2px;padding-left:180px">CE QUI CHANGE POUR TOI · 1ER JANVIER 2027 · TAXE ATTENTAT · AUTO · HABITATION · CE QUI CHANGE POUR TOI · 1ER JANVIER 2027 · TAXE ATTENTAT · AUTO · HABITATION ·</div></div>
-<div class="blk" style="font-weight:800;font-size:34px;letter-spacing:2px;color:#dc483c">AU 1ER JANVIER 2027</div>
-<h1 class="blk" style="font-size:60px">La « taxe attentat » passe de 6,50 € à <span style="color:#dc483c">8,50 €</span> par contrat.</h1>
-<div class="card blk" style="padding:22px 32px;gap:4px"><div style="font-weight:800;font-size:28px;color:#2a5ef5">Qui est concerné ?</div><div class="p" style="font-size:29px">Chaque contrat d’assurance de biens : <b>auto, habitation…</b> Elle est prélevée avec ta cotisation.</div></div>
-<div class="card blk" style="background:#e8efff;padding:22px 32px;gap:4px"><div style="font-weight:800;font-size:28px;color:#2a5ef5">À quoi elle sert ?</div><div class="p" style="font-size:29px">Elle finance le fonds qui indemnise les victimes d’attentats et d’autres infractions (FGTI).</div></div>
-<div class="card blk" style="background:#e7f7f1;padding:22px 32px;gap:4px"><div style="font-weight:800;font-size:28px;color:#0e8a6a">Ce que tu fais</div><div class="p" style="font-size:29px">Rien à faire. Sur ton prochain avis d’échéance, la ligne « contribution FGTI » passera à <b>8,50 €</b>.</div></div>
-{TIP('Bientôt dans l’appli : <b>chaque montant de ton contrat expliqué en clair</b>.')}
+<div class="blk" style="font-weight:800;font-size:36px;letter-spacing:2px;color:#dc483c;margin-top:30px">AU 1ER JANVIER 2027</div>
+<h1 class="blk" style="font-size:84px">La « taxe attentat » passe à <span style="color:#dc483c">8,50&nbsp;€</span> par contrat.</h1>
+<div class="blk" style="font-size:40px;color:#667085;font-weight:600">Au lieu de 6,50&nbsp;€ aujourd’hui.</div>
+<div class="card blk" style="padding:28px 36px;gap:10px"><div class="p" style="font-size:38px"><b>Pour qui ?</b> Tes contrats auto, habitation…</div><div class="p" style="font-size:38px"><b>Ce que tu fais :</b> rien, c’est prélevé avec ta cotisation.</div></div>
+{TIP('Bientôt dans l’appli : <b>chaque montant de ton contrat, en clair</b>.')}
 {BTNS}
 <div style="margin-top:auto;font-size:19px;color:#667085">Source : service-public.gouv.fr · arrêté du 24 juillet 2026 · Information générale, pas un conseil en assurance.</div></div>'''
 JS2=JS.replace("window.setT=(T,STEP,T0)=>{","window.setT=(T,STEP,T0,MODE)=>{").replace(
@@ -66,4 +65,4 @@ def build(name,html,MODE,STEP=1.15):
     y=y/np.max(np.abs(y))*0.8;w=wave.open(f'{fr}.wav','wb');w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((y*32767).astype('<i2').tobytes());w.close()
     subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','30','-i',f'{fr}/%04d.png','-i',f'{fr}.wav','-shortest','-c:v','libx264','-pix_fmt','yuv420p','-crf','18','-preset','medium','-c:a','aac','-b:a','192k','-movflags','+faststart',f'out/{name}.mp4'],check=True)
     print(name,nb,round(DUR,1),int(30*DUR)-1)
-build('ChiffreQuiPique-S1E1',CH,'chiffre'); build('CeQuiChange-2027-01',NEWS,'news')
+build('CeQuiChange-2027-01',NEWS,'news')
