@@ -24,6 +24,15 @@ NEWS=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:18px">{LO
 {TIP('Bientôt dans l’appli : <b>chaque montant de ton contrat, en clair</b>.')}
 {BTNS}
 <div style="margin-top:auto;font-size:19px;color:#667085">Source : service-public.gouv.fr · arrêté du 24 juillet 2026 · Information générale, pas un conseil en assurance.</div></div>'''
+NEWS2=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:20px">{LOGO}
+<div class="blk" style="position:relative;overflow:hidden;flex:none;background:#0b1220;border-radius:18px;height:60px;display:flex;align-items:center"><div style="position:absolute;left:0;top:0;bottom:0;z-index:2;background:#dc483c;color:#fff;font-weight:800;font-size:28px;letter-spacing:3px;padding:0 26px;display:flex;align-items:center">ACTU</div><div id="tick" style="white-space:nowrap;color:#f6f7f9;font-weight:700;font-size:26px;letter-spacing:2px;padding-left:180px">CE QUI CHANGE POUR TOI · EN PROJET · COTISATION ÉMEUTES · AUTO · HABITATION · PRO · CE QUI CHANGE POUR TOI · EN PROJET · COTISATION ÉMEUTES · AUTO · HABITATION · PRO ·</div></div>
+<div class="blk" style="display:flex;align-items:center;gap:18px;margin-top:24px"><div style="background:#f59e0b;color:#0b1220;font-weight:800;font-size:28px;letter-spacing:3px;padding:10px 22px;border-radius:999px">EN PROJET</div><div style="font-weight:800;font-size:30px;letter-spacing:2px;color:#dc483c">PRÉVU POUR LE 1ER JANVIER 2027</div></div>
+<h1 class="blk" style="font-size:76px">Une cotisation «&nbsp;émeutes&nbsp;» de <span style="color:#dc483c">0,8&nbsp;%</span> pourrait s’ajouter à ton assurance.</h1>
+<div class="card blk" style="padding:28px 36px;gap:10px"><div class="p" style="font-size:36px"><b>Pour qui ?</b> Habitation, auto, multirisque pro.</div><div class="p" style="font-size:36px"><b>En échange :</b> les dégâts d’émeutes seraient couverts d’office.</div></div>
+<div class="blk" style="font-size:32px;font-weight:700;color:#3b4658">Rien n’est encore décidé : on te dit dès que c’est officiel.</div>
+{TIP('Bientôt dans l’appli : <b>ce que couvre ton contrat, en clair</b>.')}
+{BTNS}
+<div style="margin-top:auto;font-size:19px;color:#667085">Sources : loi de finances 2026 (art. 171) ; projets de décrets et d’arrêté en cours d’examen (novembre 2026) · Information générale, pas un conseil en assurance.</div></div>'''
 JS2=JS.replace("window.setT=(T,STEP,T0)=>{","window.setT=(T,STEP,T0,MODE)=>{").replace(
 "B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.8);e.style.opacity=k;e.style.transform=`translateY(${(1-k)*50}px)`;});",
 """B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.7);e.style.opacity=k;
@@ -65,4 +74,4 @@ def build(name,html,MODE,STEP=1.15):
     y=y/np.max(np.abs(y))*0.8;w=wave.open(f'{fr}.wav','wb');w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((y*32767).astype('<i2').tobytes());w.close()
     subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','30','-i',f'{fr}/%04d.png','-i',f'{fr}.wav','-shortest','-c:v','libx264','-pix_fmt','yuv420p','-crf','18','-preset','medium','-c:a','aac','-b:a','192k','-movflags','+faststart',f'out/{name}.mp4'],check=True)
     print(name,nb,round(DUR,1),int(30*DUR)-1)
-build('CeQuiChange-2027-01',NEWS,'news')
+build('CeQuiChange-projet-emeutes',NEWS2,'news')
