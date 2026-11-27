@@ -1,3 +1,19 @@
+=== STANDARD « MEILLEURE OPTIMISATION » (règle du fondateur, 27/11 — PRIORITAIRE sur toute description plus ancienne, dans les tâches comme ici) ===
+NS a validé « fort » le Reel du 27/11 (media/2026-11-27/27-11-Reel-actu-vitrine-vol-vandalisme.mp4) et veut ce niveau pour CHAQUE contenu à venir. Tout contenu préparé dans l'ancien style doit être refait à ce niveau avant d'être proposé (même sujet, mêmes faits vérifiés, même RÈGLE ABSOLUE).
+1. REELS / VIDÉOS (hors épisodes de séries, qui gardent leur signature animée et leur bouton) — modèle outils/reel_dynamique.py :
+   · accroche dans la 1re seconde : 2-3 mots qui claquent (zoom 135→100 %, petit tremblement, son « tac »), puis une question au « tu » en pastille verte ;
+   · un écran toutes les ~4 s, chacun avec une seule idée, une pastille-titre de couleur (⚠️ CE QUE DIT LA LOI, ⏱️ LE CHRONO TOURNE, ✅ TOUT DE SUITE, 🔎 DANS TON CONTRAT…), un fond encre #0a111f avec un halo de couleur différent par écran, transition glissée + whoosh ;
+   · contenu CENTRÉ verticalement, gros caractères (titres 90-150 px, cartes 56-60 px), aucune grande zone vide ; un élément fort par écran (chiffre énorme en compteur, tampon rouge, mots-clés en pastilles) ;
+   · barre de progression dégradée en haut ; logo agrandi en haut à gauche, sans « @clearinsure » ; source + « Information générale, pas un conseil en assurance. » en petit vers y=1620 (au-dessus de l'interface Instagram) ;
+   · son : rythme léger (kick 120 BPM + charleston discret), « tac » à chaque apparition, tic-tac sur les délais, ding final ; PAS de voix de synthèse (si une ancienne vidéo a une voix off, ne la garde que si elle correspond exactement au texte affiché) ;
+   · écran app : « Tu ne sais pas ce que dit ton contrat ? » + BIENTÔT · L'APPLI CLEARINSURE + 3 étapes + « 100 % gratuit, pour toujours · Ça ne te coûte rien : ça te protège. » ;
+   · fin : assets/fin-instagram-abonne-cloche-like-partage.mp4 (fin rapide SANS « Merci », clics sonores calés, s'arrête sur « Partage » pour que le Reel reboucle sur l'accroche) ; durée totale 25-35 s ; couverture (thumb_offset) sur l'écran d'accroche complet (~2,6 s).
+2. POSTS ET CARROUSELS : même énergie en image fixe : accroche sur fond encre avec un mot ou un chiffre énorme en couleur, une idée par image (~40 mots max), contenu centré verticalement et aligné à 80 px à gauche, aucune ligne orpheline ni mot coupé (espaces insécables : « 2 jours », « 1 000 € », « ? »), aucune zone vide de plus d'1/4 de la hauteur, logo agrandi sans « @clearinsure », source en bas. Regarde chaque image avant de la proposer.
+3. LÉGENDES (modèle : légende du Reel du 27/11) : 1re ligne = émoji + accroche avec mots-clés ; puis une ligne d'urgence ; puis 3-4 lignes courtes commençant chacune par un émoji (⏱️ 📸 🧾 ⚠️…) ; lignes vides entre les blocs ; « Source : … » ; « Tu ne sais pas ce que dit ton contrat ? Bientôt, l'appli ClearInsure : … C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça te protège pour ne pas en perdre. » ; une question pour faire commenter ; la ligne d'appel à l'action ; 4-5 hashtags précis.
+4. STORIES RÉPONSES : ne jamais proposer ni publier la réponse d'un quiz / sondage / vrai ou faux si la question n'a pas été publiée la veille (vérifie avec Windsor.ai get_data, champs story_id, story_timestamp ; en cas de doute, demande à NS) ; sinon décale la paire question + réponse.
+5. JAMAIS d'écran « Merci » (ni dans les vidéos, ni sur les visuels).
+=== FIN DU STANDARD ===
+
 Modèles validés par NS le 26/11 :
 - story_animee_tusaurais.py : story animée 1080x1920 (blocs .blk qui apparaissent un par un + whoosh, puis bouton dégradé « Abonne-toi » cliqué par la souris → « Abonné(e) » + son clic + ding-ding). Dépend de charte_caro.py (CSS + logo, exec de la partie avant « N=7 ») et de @fontsource-variable/dm-sans@5.1.0 dans node_modules.
 - TuSaurais-S1E1-question.mp4 / -reponse.mp4 : rendu de référence.
