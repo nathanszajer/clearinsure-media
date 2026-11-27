@@ -8,8 +8,8 @@ TIP=lambda t: f'''<div class="blk" style="display:flex;gap:22px;align-items:flex
 BTNS=BTN.replace('class="blk" id="ctaw" style="display:flex;justify-content:center"','class="blk" id="ctaw" style="display:flex;justify-content:center;margin-top:4px"')
 CH=f'''<div class="s" style="height:{H}px;padding:60px 76px 50px;gap:22px">{LOGO}
 {row('LE CHIFFRE QUI PIQUE','#2a5ef5','SAISON 1 · ÉPISODE 1/8')}
-<div class="blk" style="display:flex;align-items:baseline;gap:20px"><div style="font-weight:800;font-size:170px;line-height:.9;letter-spacing:-0.04em;color:#2a5ef5"><span id="cnt">4,2</span></div><div style="font-weight:800;font-size:70px;color:#2a5ef5;letter-spacing:-0.02em">millions</div></div>
-<div class="blk" style="font-size:44px;font-weight:800;line-height:1.15">C’est, à peu près, le nombre de sinistres habitation indemnisés en France en 2025.</div>
+<div class="blk" style="display:flex;flex-direction:column;gap:0"><div style="font-weight:800;font-size:34px;letter-spacing:3px;color:#2a5ef5">PRÈS DE</div><div style="display:flex;align-items:baseline;gap:20px"><div style="font-weight:800;font-size:170px;line-height:.9;letter-spacing:-0.04em;color:#2a5ef5"><span id="cnt">4,2</span></div><div style="font-weight:800;font-size:70px;color:#2a5ef5;letter-spacing:-0.02em">millions</div></div></div>
+<div class="blk" style="font-size:44px;font-weight:800;line-height:1.15">de sinistres habitation indemnisés en France en 2025.</div>
 <div class="card blk" style="padding:24px 34px;gap:6px"><div class="p" style="font-size:30px">Coût moyen : <b><span id="cnt2">1 901</span>&nbsp;€</b> par sinistre, catastrophes naturelles comprises. Les dégâts des eaux : <b>39&nbsp;%</b> des sinistres.</div></div>
 <div class="card blk" style="background:#e7f7f1;padding:24px 34px;gap:6px"><div style="font-weight:800;font-size:30px;color:#0e8a6a">Le réflexe</div><div class="p" style="font-size:30px">Regarde <b>ta franchise</b> et <b>tes plafonds</b> avant d’en avoir besoin.</div></div>
 {TIP('Bientôt dans l’appli : <b>ta franchise et tes plafonds en clair</b>, en un clic.')}
