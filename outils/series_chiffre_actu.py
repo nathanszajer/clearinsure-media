@@ -8,13 +8,13 @@ TIP=lambda t: f'''<div class="blk" style="display:flex;gap:22px;align-items:flex
 BTNS=BTN.replace('class="blk" id="ctaw" style="display:flex;justify-content:center"','class="blk" id="ctaw" style="display:flex;justify-content:center;margin-top:4px"')
 CH=f'''<div class="s" style="height:{H}px;padding:60px 76px 50px;gap:22px">{LOGO}
 {row('LE CHIFFRE QUI PIQUE','#2a5ef5','SAISON 1 · ÉPISODE 1/8')}
-<div class="blk" style="display:flex;align-items:baseline;gap:22px"><div style="font-weight:800;font-size:190px;line-height:.9;letter-spacing:-0.04em;color:#2a5ef5">1<span style="font-size:90px;color:#0b1220"> sur </span><span id="cnt">11</span></div></div>
-<div class="blk" style="font-size:44px;font-weight:800;line-height:1.15">Un logement assuré sur 11 a eu un sinistre indemnisé en 2025.</div>
-<div class="card blk" style="padding:24px 34px;gap:6px"><div class="p" style="font-size:31px">Soit <b>4,2 millions de sinistres</b>, pour un coût moyen de <b><span id="cnt2">1 901</span>&nbsp;€</b> chacun.</div></div>
+<div class="blk" style="display:flex;align-items:baseline;gap:20px"><div style="font-weight:800;font-size:170px;line-height:.9;letter-spacing:-0.04em;color:#2a5ef5"><span id="cnt">4,2</span></div><div style="font-weight:800;font-size:70px;color:#2a5ef5;letter-spacing:-0.02em">millions</div></div>
+<div class="blk" style="font-size:44px;font-weight:800;line-height:1.15">C’est, à peu près, le nombre de sinistres habitation indemnisés en France en 2025.</div>
+<div class="card blk" style="padding:24px 34px;gap:6px"><div class="p" style="font-size:30px">Coût moyen : <b><span id="cnt2">1 901</span>&nbsp;€</b> par sinistre, catastrophes naturelles comprises. Les dégâts des eaux : <b>39&nbsp;%</b> des sinistres.</div></div>
 <div class="card blk" style="background:#e7f7f1;padding:24px 34px;gap:6px"><div style="font-weight:800;font-size:30px;color:#0e8a6a">Le réflexe</div><div class="p" style="font-size:30px">Regarde <b>ta franchise</b> et <b>tes plafonds</b> avant d’en avoir besoin.</div></div>
 {TIP('Bientôt dans l’appli : <b>ta franchise et tes plafonds en clair</b>, en un clic.')}
 {BTNS}
-<div style="margin-top:auto;font-size:19px;color:#667085">Source : France Assureurs, « L’assurance habitation en 2025 » (juillet 2026) · Information générale, pas un conseil en assurance.</div></div>'''
+<div style="margin-top:auto;font-size:19px;color:#667085">Source : France Assureurs, « L’assurance habitation en 2025 », 24 juillet 2026 · Information générale, pas un conseil en assurance.</div></div>'''
 NEWS=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:18px">{LOGO}
 <div class="blk" style="position:relative;overflow:hidden;flex:none;background:#0b1220;border-radius:18px;height:60px;display:flex;align-items:center"><div style="position:absolute;left:0;top:0;bottom:0;z-index:2;background:#dc483c;color:#fff;font-weight:800;font-size:28px;letter-spacing:3px;padding:0 26px;display:flex;align-items:center">ACTU</div><div id="tick" style="white-space:nowrap;color:#f6f7f9;font-weight:700;font-size:26px;letter-spacing:2px;padding-left:180px">CE QUI CHANGE POUR TOI · 1ER JANVIER 2027 · TAXE ATTENTAT · AUTO · HABITATION · CE QUI CHANGE POUR TOI · 1ER JANVIER 2027 · TAXE ATTENTAT · AUTO · HABITATION ·</div></div>
 <div class="blk" style="font-weight:800;font-size:34px;letter-spacing:2px;color:#dc483c">AU 1ER JANVIER 2027</div>
@@ -30,7 +30,7 @@ JS2=JS.replace("window.setT=(T,STEP,T0)=>{","window.setT=(T,STEP,T0,MODE)=>{").r
 """B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.7);e.style.opacity=k;
  if(MODE==='chiffre'){e.style.transform=`scale(${0.9+0.1*k})`;} else {e.style.transform=`translateX(${(1-k)*-60}px)`;}});
  if(MODE==='chiffre'){const c=document.getElementById('cnt'),c2=document.getElementById('cnt2'); const i1=B.findIndex(b=>b.contains(c)),i2=B.findIndex(b=>b.contains(c2));
-   const k1=Math.min(1,Math.max(0,(T-(0.3+i1*STEP))/1.0)); c.textContent=Math.max(1,Math.round(1+ (11-1)*(1-Math.pow(1-k1,3))));
+   const k1=Math.min(1,Math.max(0,(T-(0.3+i1*STEP))/1.0)); c.textContent=(4.2*(1-Math.pow(1-k1,3))).toFixed(1).replace('.',',');
    const k2=Math.min(1,Math.max(0,(T-(0.3+i2*STEP))/1.0)); c2.textContent=Math.round(1901*(1-Math.pow(1-k2,3))).toLocaleString('fr-FR').replace(/\\u202f|\\u00a0| /g,'\\u00a0');}
  else {const tk=document.getElementById('tick'); tk.style.transform=`translateX(${-T*90}px)`;}""")
 exec(open('lib_tail.py',encoding='utf-8').read().split('def build')[0])
