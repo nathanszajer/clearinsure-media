@@ -16,3 +16,4 @@ Modèles validés par NS le 26/11 :
   · Jours les plus faibles : vendredi, samedi → contenus plus légers (vrai ou faux, question, rappel simple).
   · Heures (Europe/Paris) : lundi 19 h 30 · mardi 19 h · mercredi 19 h · jeudi 20 h 30 · vendredi 13 h · samedi 18 h 30 · dimanche 20 h · stories 21 h 30.
   · Si un contenu fort tombe sur un jour faible, échange-le avec un contenu plus léger d'un meilleur jour de la même semaine (en gardant la règle « jamais deux fois le même format / sujet à la suite »).
+- CHABBAT (règle du fondateur, 27/11) : NS n'a pas de téléphone du vendredi coucher du soleil au samedi sortie des étoiles. Ne planifie aucune story à sticker (ni réponse de story) le vendredi soir ni le samedi : mets la question le dimanche, le lundi… et la réponse le lendemain. Le post du samedi est validé le vendredi et publié le samedi soir après la sortie de Chabbat (la tâche du jour s'en occupe) ; rien n'est publié pendant Chabbat.
