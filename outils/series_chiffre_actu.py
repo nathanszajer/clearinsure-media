@@ -33,6 +33,15 @@ NEWS2=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:20px">{L
 {TIP('Bientôt dans l’appli : <b>ce que couvre ton contrat, en clair</b>.')}
 {BTNS}
 <div style="margin-top:auto;font-size:19px;color:#667085">Sources : loi de finances 2026 (art. 171) ; projets de décrets et d’arrêté en cours d’examen (novembre 2026) · Information générale, pas un conseil en assurance.</div></div>'''
+NEWS3=f'''<div class="s" style="height:{H}px;padding:52px 76px 44px;gap:20px">{LOGO}
+<div class="blk" style="position:relative;overflow:hidden;flex:none;background:#0b1220;border-radius:18px;height:60px;display:flex;align-items:center"><div style="position:absolute;left:0;top:0;bottom:0;z-index:2;background:#dc483c;color:#fff;font-weight:800;font-size:28px;letter-spacing:3px;padding:0 26px;display:flex;align-items:center">ACTU</div><div id="tick" style="white-space:nowrap;color:#f6f7f9;font-weight:700;font-size:26px;letter-spacing:2px;padding-left:180px">FLASH · SÉCHERESSE 2026 · CATASTROPHE NATURELLE · FISSURES · CE QUI CHANGE POUR TOI · FLASH · SÉCHERESSE 2026 · CATASTROPHE NATURELLE · FISSURES ·</div></div>
+<div class="blk" style="display:flex;align-items:center;gap:18px;margin-top:10px"><div style="background:#dc483c;color:#fff;font-weight:800;font-size:28px;letter-spacing:3px;padding:10px 22px;border-radius:999px">FLASH</div><div style="font-weight:800;font-size:30px;letter-spacing:2px;color:#3b4658">JOURNAL OFFICIEL DU 21/11/2026</div></div>
+<h1 class="blk" style="font-size:66px">Fissures dues à la sécheresse&#8239;?<br>Déclare-les avant le <span style="color:#dc483c">21&nbsp;décembre</span>.</h1>
+<div class="blk" style="font-size:31px;color:#3b4658;font-weight:600">De nouvelles communes sont reconnues en catastrophe naturelle (sécheresse 2026).</div>
+<div class="card blk" style="padding:28px 36px;gap:10px"><div class="p" style="font-size:32px"><b>1.</b> Vérifie si ta commune est sur la liste (site de ta préfecture).</div><div class="p" style="font-size:32px"><b>2.</b> Déclare à ton assureur, avec des photos.</div></div>
+{TIP('Bientôt dans l’appli : <b>ta garantie catastrophe naturelle, en clair</b>.')}
+{BTNS}
+<div style="margin-top:auto;font-size:19px;color:#667085">Sources : arrêté du 13/11/2026 (INTE2630374A), JO du 21/11/2026 ; préfecture de la Loire · Information générale, pas un conseil en assurance.</div></div>'''
 JS2=JS.replace("window.setT=(T,STEP,T0)=>{","window.setT=(T,STEP,T0,MODE)=>{").replace(
 "B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.8);e.style.opacity=k;e.style.transform=`translateY(${(1-k)*50}px)`;});",
 """B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.7);e.style.opacity=k;
@@ -74,4 +83,4 @@ def build(name,html,MODE,STEP=1.15):
     y=y/np.max(np.abs(y))*0.8;w=wave.open(f'{fr}.wav','wb');w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((y*32767).astype('<i2').tobytes());w.close()
     subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','30','-i',f'{fr}/%04d.png','-i',f'{fr}.wav','-shortest','-c:v','libx264','-pix_fmt','yuv420p','-crf','18','-preset','medium','-c:a','aac','-b:a','192k','-movflags','+faststart',f'out/{name}.mp4'],check=True)
     print(name,nb,round(DUR,1),int(30*DUR)-1)
-build('CeQuiChange-projet-emeutes',NEWS2,'news')
+build('CeQuiChange-flash-secheresse',NEWS3,'news')
