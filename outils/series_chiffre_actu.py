@@ -50,7 +50,7 @@ def build(name,html,MODE,STEP=1.15):
     with sync_playwright() as p:
         b=p.chromium.launch();pg=b.new_page(viewport={'width':1080,'height':H},device_scale_factor=1)
         pg.goto('file://'+os.path.abspath('caro/b.html'));pg.evaluate('document.fonts.ready');pg.wait_for_timeout(300);pg.evaluate(JS2);pg.evaluate('setup()')
-        nb=pg.evaluate('B.length');T0=0.3+(nb-1)*STEP+0.3;DUR=T0+4.6
+        nb=pg.evaluate('B.length');T0=0.3+(nb-1)*STEP+0.3;DUR=T0+3.4
         for n in range(int(30*DUR)):
             pg.evaluate(f"setT({n/30},{STEP},{T0},'{MODE}')");pg.screenshot(path=f'{fr}/{n:04d}.png')
         b.close()
@@ -62,8 +62,8 @@ def build(name,html,MODE,STEP=1.15):
         else: whoosh(y,t-0.1,0.12)
     if MODE=='chiffre':
         tickr(y,0.3+2*STEP,0.18); tickr(y,0.3+4*STEP,0.18)
-    mclick(y,T0+1.60,0.7);bell(y,T0+1.75,1318.5,0.5);bell(y,T0+1.86,1975.5,0.45)
+    mclick(y,T0+0.70,0.7);bell(y,T0+0.82,1318.5,0.5);bell(y,T0+0.93,1975.5,0.45)
     y=y/np.max(np.abs(y))*0.8;w=wave.open(f'{fr}.wav','wb');w.setnchannels(2);w.setsampwidth(2);w.setframerate(sr);w.writeframes((y*32767).astype('<i2').tobytes());w.close()
     subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','30','-i',f'{fr}/%04d.png','-i',f'{fr}.wav','-shortest','-c:v','libx264','-pix_fmt','yuv420p','-crf','18','-preset','medium','-c:a','aac','-b:a','192k','-movflags','+faststart',f'out/{name}.mp4'],check=True)
     print(name,nb,round(DUR,1),int(30*DUR)-1)
-build('ChiffreQuiPique-S1E1',CH,'chiffre')
+build('ChiffreQuiPique-S1E1',CH,'chiffre'); build('CeQuiChange-2027-01',NEWS,'news')

@@ -18,15 +18,15 @@ window.setT=(T,STEP,T0)=>{
  const ez=x=>x<0?0:x>1?1:1-Math.pow(1-x,3), ease=x=>x<0?0:x>1?1:(x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2), lerp=(a,b,k)=>a+(b-a)*k;
  B.forEach((e,i)=>{const k=ez((T-(0.3+i*STEP))/0.8);e.style.opacity=k;e.style.transform=`translateY(${(1-k)*50}px)`;});
  const t=T-T0; const btn=document.getElementById('btn'),l1=document.getElementById('l1'),l2=document.getElementById('l2'),rip=document.getElementById('rip'),cur=document.getElementById('cur');
- const tx=330,ty=50,sx=620,sy=240; let k=ease((t-0.5)/1.1); let cx=lerp(sx,tx,k),cy=lerp(sy,ty,k)-Math.sin(k*Math.PI)*60;
- if(t>2.6){const k2=ease((t-2.6)/0.9);cx=lerp(tx,tx+120,k2);cy=lerp(ty,ty+110,k2);}
- cur.style.opacity=t<0.3?0:1;
- const press=(t>1.6&&t<1.85)?Math.sin((t-1.6)/0.25*Math.PI):0;
+ const tx=330,ty=50,sx=620,sy=240; let k=ease((t-0.2)/0.5); let cx=lerp(sx,tx,k),cy=lerp(sy,ty,k)-Math.sin(k*Math.PI)*60;
+ if(t>1.5){const k2=ease((t-1.5)/0.7);cx=lerp(tx,tx+120,k2);cy=lerp(ty,ty+110,k2);}
+ cur.style.opacity=t<0?0:1;
+ const press=(t>0.7&&t<0.9)?Math.sin((t-0.7)/0.2*Math.PI):0;
  cur.style.transform=`translate(${cx-4}px,${cy-4}px) scale(${1-0.12*press})`; btn.style.transform=`scale(${1-0.06*press})`;
- const f=Math.min(1,Math.max(0,(t-1.75)/0.2)); const done=t>=1.75;
+ const f=Math.min(1,Math.max(0,(t-0.8)/0.15)); const done=t>=0.8;
  btn.style.background=done?`linear-gradient(90deg,rgba(255,255,255,${f}),rgba(255,255,255,${f})),linear-gradient(90deg,#2f6bff,#12a982)`:'linear-gradient(90deg,#2f6bff,#12a982)';
  btn.style.outline=done?`3px solid rgba(18,169,130,${f})`:'none'; btn.style.outlineOffset='-3px';
  l1.style.opacity=1-f; l2.style.opacity=f; l2.style.transform=`scale(${0.8+0.2*f})`;
- const r=Math.min(1,Math.max(0,(t-1.65)/0.6)); rip.style.opacity=(t>1.65&&r<1)?(1-r)*0.9:0; const d=30+140*r;
+ const r=Math.min(1,Math.max(0,(t-0.75)/0.5)); rip.style.opacity=(t>0.75&&r<1)?(1-r)*0.9:0; const d=30+140*r;
  rip.style.width=rip.style.height=d+'px'; rip.style.left=(tx-d/2)+'px'; rip.style.top=(ty-d/2)+'px';
 };0;"""
