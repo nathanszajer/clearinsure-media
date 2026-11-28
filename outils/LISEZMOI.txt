@@ -12,6 +12,12 @@ NS a validé « fort » le Reel du 27/11 (media/2026-11-27/27-11-Reel-actu-vitri
 3. LÉGENDES (modèle : légende du Reel du 27/11) : 1re ligne = émoji + accroche avec mots-clés ; puis une ligne d'urgence ; puis 3-4 lignes courtes commençant chacune par un émoji (⏱️ 📸 🧾 ⚠️…) ; lignes vides entre les blocs ; « Source : … » ; « Tu ne sais pas ce que dit ton contrat ? Bientôt, l'appli ClearInsure : … C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça te protège pour ne pas en perdre. » ; une question pour faire commenter ; la ligne d'appel à l'action ; 4-5 hashtags précis.
 4. STORIES RÉPONSES : ne jamais proposer ni publier la réponse d'un quiz / sondage / vrai ou faux si la question n'a pas été publiée la veille (vérifie avec Windsor.ai get_data, champs story_id, story_timestamp ; en cas de doute, demande à NS) ; sinon décale la paire question + réponse.
 5. JAMAIS d'écran « Merci » (ni dans les vidéos, ni sur les visuels).
+6. GRATUIT, POUR TOUJOURS, POUR AIDER LES ASSURÉS (règle du fondateur, 28/11 — « optimise toujours au max du max ») : ça doit se VOIR sur chaque contenu, pas seulement à la fin.
+   · Sur CHAQUE visuel (chaque image de post / carrousel / story, chaque écran de Reel) : petite pastille verte #12a982 fixe en haut à droite, à la place de l'ancien « @clearinsure » : « 100 % gratuit · pour toujours » (DM Sans 800, ~26-28 px, texte blanc, coins arrondis), alignée avec le logo.
+   · Écran / image ClearInsure de fin : « 100 % gratuit, pour toujours » en grand + « Pour aider les assurés. Ça ne te coûte rien : ça te protège. »
+   · Légende : juste après la phrase-clé « C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça te protège pour ne pas en perdre. », ajouter « 100 % gratuit, pour toujours : ClearInsure est là pour aider les assurés. »
+   · Jamais de promesse de résultat ni d'économie ; ClearInsure n'est pas un assureur.
+7. TOUJOURS LE MAXIMUM : avant chaque proposition, relis le contenu comme un abonné pressé : accroche dans la 1re seconde / 1re image, une idée par écran, gros caractères, aucune zone vide, rythme, son calé, source visible, gratuité visible. Si un point peut être meilleur, améliore-le avant d'envoyer.
 === FIN DU STANDARD ===
 
 Modèles validés par NS le 26/11 :
