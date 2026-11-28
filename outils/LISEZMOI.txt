@@ -14,10 +14,13 @@ NS a validé « fort » le Reel du 27/11 (media/2026-11-27/27-11-Reel-actu-vitri
 5. JAMAIS d'écran « Merci » (ni dans les vidéos, ni sur les visuels).
 6. GRATUIT, POUR TOUJOURS, POUR AIDER LES ASSURÉS (règle du fondateur, 28/11 — « optimise toujours au max du max ») : ça doit se VOIR sur chaque contenu, pas seulement à la fin.
    · Sur CHAQUE visuel (chaque image de post / carrousel / story, chaque écran de Reel) : petite pastille verte #12a982 fixe en haut à droite, à la place de l'ancien « @clearinsure » : « 100 % gratuit · pour toujours » (DM Sans 800, ~26-28 px, texte blanc, coins arrondis), alignée avec le logo.
-   · Écran / image ClearInsure de fin : « 100 % gratuit, pour toujours » en grand + « Pour aider les assurés. Ça ne te coûte rien : ça te protège. »
-   · Légende : juste après la phrase-clé « C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça te protège pour ne pas en perdre. », ajouter « 100 % gratuit, pour toujours : ClearInsure est là pour aider les assurés. »
+   · Écran / image ClearInsure de fin : « 100 % gratuit, pour toujours » en grand + « Pour aider les assurés. Ça ne te coûte rien : ça t'aide à mieux te protéger. »
+   · Légende : juste après la phrase-clé « C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça t'aide à mieux te protéger pour ne pas perdre d'argent. », ajouter « 100 % gratuit, pour toujours : ClearInsure est là pour aider les assurés. »
    · Jamais de promesse de résultat ni d'économie ; ClearInsure n'est pas un assureur.
 7. TOUJOURS LE MAXIMUM : avant chaque proposition, relis le contenu comme un abonné pressé : accroche dans la 1re seconde / 1re image, une idée par écran, gros caractères, aucune zone vide, rythme, son calé, source visible, gratuité visible. Si un point peut être meilleur, améliore-le avant d'envoyer.
+8. NOUVELLES PHRASES-CLÉS (validées par NS le 28/11, PRIORITAIRES : elles remplacent PARTOUT les anciennes, même si une tâche planifiée, le canevas, une note ou un PRET.txt donne encore l'ancienne version ; refais le visuel / l'écran concerné si l'ancienne phrase y est incrustée) :
+   · visuels et fins de Reels : « Ça ne te coûte rien : ça te protège. » → « Ça ne te coûte rien : ça t'aide à mieux te protéger. »
+   · légendes et voix : « C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça te protège pour ne pas en perdre. » → « C'est gratuit, ça ne te coûte rien. C'est même le contraire : ça t'aide à mieux te protéger pour ne pas perdre d'argent. »
 === FIN DU STANDARD ===
 
 Modèles validés par NS le 26/11 :
